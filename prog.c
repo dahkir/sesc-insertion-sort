@@ -30,21 +30,20 @@ int main(void) {
  }
  head = head->next;
  int sorted=0;
- int count = 0;
- while (sorted == 0 && count<n){
-   sorted = 1;
+ int count = n;
+ while (count>0){
    temp = head;
-   for(int i=0;i<count;i++)temp=temp->next;
+   for(int i=count-1;i>0;i--)temp=temp->next;
    while (temp->next!=NULL){
      if (temp->value<temp->next->value){
        k = temp->value;
        temp->value = temp->next->value;
        temp->next->value = k;
-       sorted = 0;
      }
      temp=temp->next;
-   }
-   count++;
+    }
+  if (count == n)sorted=0;
+  count--;
  }
  while (head!=NULL){
    printf("%d ", head->value);
