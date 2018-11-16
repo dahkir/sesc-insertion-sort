@@ -34,7 +34,7 @@ int main(void) {
  while (sorted == 0 && count<n){
    sorted = 1;
    temp = head;
-   for(int i;i<count;i++)temp=temp->next;
+   for(int i=0;i<count;i++)temp=temp->next;
    while (temp->next!=NULL){
      if (temp->value<temp->next->value){
        k = temp->value;
