@@ -29,7 +29,6 @@ int main(void) {
    pushb(&head, k);
  }
  head = head->next;
- int sorted=0;
  int count = n;
  while (count>0){
    temp = head;
@@ -42,7 +41,6 @@ int main(void) {
      }
      temp=temp->next;
     }
-  if (count == n)sorted=0;
   count--;
  }
  while (head!=NULL){
